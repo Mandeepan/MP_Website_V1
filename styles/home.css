@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+/* html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background: #000; 
+  color: #c8c2bd;
+} */
+html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Montserrat Alternates', monospace, sans-serif;
+    background: #000; /* Black background */
+    color: #c8c2bd; /* Light gray text */
+    letter-spacing: 0.05em; /* Wider spacing to make it feel retro */
+}
+  
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+header, footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.main {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Glow Text */
+.header-text {
+  color: #c8c2bd;
+  font-size: 3em;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.glow-filter {
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 0 5px #ffae00); /* Yellow glowing shadow */
+  word-spacing: 0.05rem;
+}
+
+/* Background Effects */
+.bg {
+    width: 100%; height: 100%;
+    max-width: 44em;
+    position: absolute;
+}
+.bg > div {
+    position: absolute;
+    scale: 1.2;
+    opacity: 0.6;
+}
+.bg > div:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    border-radius: 100em;
+    box-shadow: 
+    inset 0 0 4em 3em rgba(238, 200, 175, 0.2),
+    inset 0 0 2em 0.4em rgba(238, 200, 175, 0.2),
+    0 0 0.1em 0.1em rgba(238, 200, 175, 0.2),
+    0 0 1em 0.4em rgba(238, 200, 175, 0.3);
+
+    translate: 0 -70%;
+    animation: onloadbgt 1s ease-in-out forwards;
+}
+.bg > div:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    border-radius: 100em;
+    box-shadow: 
+    inset 0 0 4em 3em rgba(238, 200, 175, 0.2),
+    inset 0 0 2em 0.4em rgba(238, 200, 175, 0.2),
+    0 0 0.1em 0.1em rgba(238, 200, 175, 0.2),
+    0 0 1em 0.4em rgba(238, 200, 175, 0.3);
+    
+    translate: 0 70%;
+    animation: onloadbgb 1s ease-in-out forwards;
+}
+@keyframes onloadbgt {
+    0% { translate: 0 -70%; opacity: 0.3; }
+    100% { translate: 0 -64%; opacity: 0.8; }
+}
+@keyframes onloadbgb {
+    0% { translate: 0 70%; opacity: 0.3; }
+    100% { translate: 0 64%; opacity: 0.8; }
+}
+/* Profile Picture */
+.profile-pic {
+  filter: brightness(90%) opacity(90%);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 1rem 0;
+  object-fit: cover;
+  border: 3px solid #c8c2bd; /* Gold border */
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+
+
+/* Buttons for Navigation */
+/* Container for buttons */
+.buttons {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* To make sure it is on top of other elements */
+    position: relative; /* Ensure proper stacking context */
+}
+
+/* Button styles */
+.buttons button {
+    background: linear-gradient(135deg, #53565a, #eedee0); /* Gradient background */
+    color: #501c1c; /* Dark wine red text color */
+    border: none;
+    border-radius: 20px;
+    padding: 0.75rem 1.5rem;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Montserrat Alternates', monospace, sans-serif;
+    font-style: normal;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    z-index: 11; /* Make sure buttons are clickable */
+    position: relative; /* Ensure no overlap issues */
+    width: 150px; /* Consistent width for all buttons */
+}
+
+/* Hover effect for buttons */
+.buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 154, 139, 0.4); /* Shadow effect for depth */
+}
+
+  
+
+/* .buttons button {
+background: #eedee0;
+color: #000;
+border: none;
+border-radius: 20px;
+padding: 0.75rem 1.5rem;
+font-size: 1rem;
+margin: 0.5rem;
+cursor: pointer;
+transition: background 0.3s, transform 0.3s;
+z-index: 11; 
+position: relative; 
+}
+
+
+.buttons button:hover {
+background: #53565a;  
+transform: scale(1.05); 
+}
+
+ */
+
+
+
+/* Ensure parent element isn’t interfering */
+body {
+overflow: auto; /* Allow scrolling if needed */
+position: relative; /* Ensure proper stacking context for children */
+}
+
+
+/* Social Media Links */
+.social-links {
+  margin: 2.5rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  -ms-flex-align: center;
+
+}
+
+
+
+.social-links a {
+    display: inline-block; /* Makes sure the link area matches the image size */
+    margin: 10px 10px;
+    position: relative; /* Ensures no overlapping issues */
+    z-index: 10; /* Brings the icon to the front */
+}
+
+.social-icon {
+width: 40px;
+height: 40px;
+transition: transform 0.3s;
+}
+
+.social-links a:hover .social-icon {
+transform: scale(1.1); /* Zoom effect when hovering over the link */
+}
+
+/* Footer Styling */
+footer p {
+  font-size: 0.1rem;
+  color: #888;
+}
+
+/* Keyframes for background pulsing effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
