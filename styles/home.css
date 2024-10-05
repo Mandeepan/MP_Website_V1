@@ -108,18 +108,27 @@ header, footer {
     border-right: none;
 }
 .header-text span {
-    animation: typing 1.5s steps(9, end) 1.7s forwards;
+    animation: typing 1.5s steps(9, end) 1.2s forwards;
     border-right: none;
 }
 .header-text p:nth-child(3) {
-    animation: typing 2s steps(41, end) 3.4s forwards;
+    animation: typing 2s steps(41, end) 3s forwards;
+    /* white-space: normal; 
+    word-break: break-word;  */
+    max-width: 100%;
     border-right: none;
 }
 .header-text p:nth-child(4) {
-    animation: typing 2s steps(46, end) 6s forwards;
+    animation: typing 2s steps(46, end) 4.5s forwards;
+    /* white-space: normal; 
+    word-break: break-word;  */
+    max-width: 100%;
     border-right: none;
 }
-  
+
+
+
+
 /* Typing animation keyframes */
 @keyframes typing {
     from {
@@ -236,8 +245,9 @@ transform: scale(1.1); /* Zoom effect when hovering over the link */
 
 /* Footer Styling */
 footer p {
-  font-size: 0.1rem;
+  font-size: 0.6rem;
   color: #888;
+  text-align: center;
 }
 
 /* Keyframes for background pulsing effect */
@@ -249,3 +259,30 @@ footer p {
     transform: scale(1.1);
   }
 }
+
+
+/*Media queries for responsiveness */
+
+@media (max-width: 480px) {
+    body {
+      font-size: 0.7rem;
+    }
+    .header-text p {
+      font-size: 0.7rem;
+      text-align: center; 
+    }
+    .header-text span {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    
+    .buttons button {
+      font-size: 0.7rem;
+      padding: 0.5rem 0.7rem;
+    }
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+    }
+  }
