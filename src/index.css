@@ -1,0 +1,19 @@
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Montserrat Alternates', monospace, sans-serif;
+    background: #000; /* Black background */
+    color: #c8c2bd; /* Light gray text */
+    letter-spacing: 0.05em; /* Wider spacing to make it feel retro */
+}
+  

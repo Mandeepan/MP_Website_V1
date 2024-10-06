@@ -1,40 +1,28 @@
 {
-  "name": "mp-website-v1",
-  "version": "1.0.0",
-  "main": "app.js",
+  "name": "mp-website-v2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sequelize": "sequelize",
-    "sequelize-cli": "sequelize-cli",
-    "start": "per-env",
-    "start:development": "nodemon ./bin/www",
-    "start:production": "node ./bin/www",
-    "build": "node psql-setup-script.js"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
-    "csurf": "^1.10.0",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.0",
-    "express-async-errors": "^3.1.1",
-    "express-validator": "^7.2.0",
-    "helmet": "^7.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "morgan": "^1.10.0",
-    "per-env": "^1.0.2",
-    "pg": "^8.13.0",
-    "sequelize": "^6.37.3",
-    "sequelize-cli": "^6.6.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
-    "dotenv-cli": "^7.4.2",
-    "nodemon": "^3.1.5",
-    "sqlite3": "^5.1.7"
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "vite": "^4.4.5",
+    "vite-plugin-eslint": "^1.8.1"
   }
 }
